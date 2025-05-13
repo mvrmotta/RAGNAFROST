@@ -1,0 +1,765 @@
+  - Id: 1186
+    AegisName: Death_Guidance
+    Name: Death Guidance
+    Type: Weapon
+    SubType: 2hSword
+    Buy: 20
+    Weight: 2000
+    Attack: 200
+    Range: 1
+    Slots: 2
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Classes:
+      Upper: true
+      All_Third: true
+      Fourth: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bStr,5;
+      bonus bAgi,2;
+      bonus bFlee2,20;
+      bonus3 bAutoSpell,"NPC_HELLPOWER",1,10;
+      bonus4 bAutoSpell,"NPC_HELLPOWER",1,10,0;
+      bonus3 bAutoSpell,"NPC_VAMPIRE_GIFT",(getrefine()>8?2:1),20;
+
+  - Id: 1256
+    AegisName: Katar_Of_Cold_Icicle
+    Name: Katar of Frozen Icicle
+    Type: Weapon
+    SubType: Katar
+    Buy: 45000
+    Weight: 1200
+    Attack: 105
+    Range: 1
+    Jobs:
+      Assassin: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 3
+    EquipLevelMin: 55
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Water;
+      bonus2 bAddEff,Eff_Freeze,500;
+
+  - Id: 1468
+    AegisName: Zephyrus
+    Name: Zephyrus
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 2000
+    Attack: 170
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+      bonus2 bAddEff,Eff_Silence,200;
+      bonus3 bAutoSpell,"MG_THUNDERSTORM",3,100;
+
+  - Id: 1470
+    AegisName: Brionac
+    Name: Brionac
+    Type: Weapon
+    SubType: 2hSpear
+    Buy: 20
+    Weight: 3000
+    Attack: 190
+    Range: 3
+    Jobs:
+      Crusader: true
+      Knight: true
+      Swordman: true
+    Locations:
+      Both_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 48
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Holy;
+      skill "AL_HEAL",5;
+      bonus3 bAutoSpell,"MG_SOULSTRIKE",3,100;
+
+  - Id: 1913
+    AegisName: Electronic_Guitar
+    Name: Electric Guitar
+    Type: Weapon
+    SubType: Musical
+    Buy: 20
+    Weight: 1800
+    Attack: 110
+    Range: 1
+    Jobs:
+      BardDancer: true
+    Gender: Male
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      skill "WZ_JUPITEL",1;
+      bonus3 bAutoSpell,"WZ_JUPITEL",1,100;
+      bonus bAtkEle,Ele_Wind;
+      bonus bInt,2;
+      bonus bAgi,1;
+
+  - Id: 1972
+    AegisName: Electric_Eel
+    Name: Electric Eel
+    Type: Weapon
+    SubType: Whip
+    Buy: 20
+    Weight: 2000
+    Attack: 100
+    Range: 2
+    Slots: 2
+    Jobs:
+      BardDancer: true
+    Classes:
+      Upper: true
+      All_Third: true
+      Fourth: true
+    Gender: Female
+    Locations:
+      Right_Hand: true
+    WeaponLevel: 4
+    EquipLevelMin: 70
+    Refineable: true
+    Script: |
+      bonus bAtkEle,Ele_Wind;
+      bonus bInt,2;
+      bonus bAgi,2;
+      bonus3 bAutoSpell,"WZ_JUPITEL",3,20;
+      .@r = getrefine();
+      if (.@r>0)
+         bonus3 bAutoSpell,"CG_ARROWVULCAN",.@r,50;
+
+  - Id: 2325
+    AegisName: Saint_Robe
+    Name: Saint's Robe
+    Type: Armor
+    Buy: 54000
+    Weight: 600
+    Defense: 50
+    Jobs:
+      Acolyte: true
+      Alchemist: true
+      Blacksmith: true
+      Merchant: true
+      Monk: true
+      Priest: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    Refineable: true
+    Script: |
+      bonus bMdef,5;
+
+  - Id: 2346
+    AegisName: Water_Sprits_Armor
+    Name: Saphien's Armor of Ocean
+    Type: Armor
+    Buy: 136000
+    Weight: 2200
+    Defense: 25
+    Jobs:
+      Alchemist: true
+      Blacksmith: true
+      Crusader: true
+      Knight: true
+      Merchant: true
+      Swordman: true
+    Locations:
+      Armor: true
+    ArmorLevel: 1
+    EquipLevelMin: 45
+    Refineable: true
+    Script: |
+      bonus bDefEle,Ele_Water;
+
+  - Id: 2519
+    AegisName: Morrigane's_Manteau
+    Name: Morrigane's Manteau
+    Type: Armor
+    Buy: 30000
+    Weight: 600
+    Defense: 9
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 61
+    Refineable: true
+    Script: |
+      bonus bLuk,2;
+      bonus bFlee2,8;
+
+  - Id: 2650
+    AegisName: Morrigane's_Belt
+    Name: Morrigane's Belt
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 61
+    Script: |
+      bonus bBaseAtk,5;
+      bonus bCritical,3;
+
+  - Id: 2651
+    AegisName: Morrigane's_Pendant
+    Name: Morrigane's Pendant
+    Type: Armor
+    Buy: 30000
+    Weight: 200
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 61
+    Script: |
+      bonus bStr,2;
+      bonus bCritical,3;
+
+  - Id: 5127
+    AegisName: Morrigane's_Helm
+    Name: Morrigane's Helm
+    Type: Armor
+    Buy: 30000
+    Weight: 500
+    Defense: 8
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 61
+    Refineable: true
+    View: 257
+    Script: |
+      bonus bLuk,2;
+      bonus bBaseAtk,3;
+
+  - Id: 720
+    AegisName: Skyblue_Jewel
+    Name: Aquamarine
+    Type: Etc
+    Buy: 6000
+    Weight: 100
+    Flags:
+      BuyingStore: true
+
+  - Id: 756
+    AegisName: Oridecon_Stone
+    Name: Rough Oridecon
+    Type: Etc
+    Buy: 550
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+
+  - Id: 757
+    AegisName: Elunium_Stone
+    Name: Rough Elunium
+    Type: Etc
+    Buy: 650
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+
+  - Id: 943
+    AegisName: Solid_Shell
+    Name: Solid Shell
+    Type: Etc
+    Buy: 448
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 950
+    AegisName: Heart_Of_Mermaid
+    Name: Heart of Mermaid
+    Type: Etc
+    Buy: 264
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 951
+    AegisName: Fin
+    Name: Fin
+    Type: Etc
+    Buy: 412
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 956
+    AegisName: Gill
+    Name: Gill
+    Type: Etc
+    Buy: 342
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 960
+    AegisName: Nipper
+    Name: Nipper
+    Type: Etc
+    Buy: 114
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 962
+    AegisName: Tentacle
+    Name: Tentacle
+    Type: Etc
+    Buy: 70
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 963
+    AegisName: Sharp_Scale
+    Name: Sharp Scale
+    Type: Etc
+    Buy: 250
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 991
+    AegisName: Crystal_Blue
+    Name: Crystal Blue
+    Type: Etc
+    Buy: 1000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+
+  - Id: 995
+    AegisName: Mistic_Frozen
+    Name: Mystic Frozen
+    Type: Etc
+    Buy: 3000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+
+  - Id: 1024
+    AegisName: Chinese_Ink
+    Name: Squid Ink
+    Type: Etc
+    Buy: 264
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 1053
+    AegisName: Tooth_Of_Ancient_Fish
+    Name: Ancient Tooth
+    Type: Etc
+    Buy: 548
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 1054
+    AegisName: Lip_Of_Ancient_Fish
+    Name: Ancient Lips
+    Type: Etc
+    Buy: 1000
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 7324
+    AegisName: IL_Kraken_Leg
+    Name: Deep Sea Kraken's Leg
+    Type: Etc
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 25729
+    AegisName: Shadowdecon
+    Name: Shadowdecon
+    Type: Etc
+    Weight: 20
+    Flags:
+      BuyingStore: true
+      DropEffect: CLIENT
+
+  - Id: 25892
+    AegisName: Abysmal_Clam
+    Name: Deep Sea Shell
+    Type: Etc
+    Buy: 840
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 25893
+    AegisName: Deepsea_Fish_Tail
+    Name: Deep Sea Fish's Tail
+    Type: Etc
+    Buy: 840
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 25894
+    AegisName: Rotten_Deepseafish
+    Name: Rotten Deep Sea Fish
+    Type: Etc
+    Buy: 840
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 25895
+    AegisName: Deep_Sea_Starfish
+    Name: Deep Sea Starfish
+    Type: Etc
+    Buy: 840
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 25896
+    AegisName: Deep_Sea_Crab
+    Name: Deep Sea Crab
+    Type: Etc
+    Buy: 840
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 25897
+    AegisName: Crown_Of_Witch
+    Name: Deep Sea Witch's Crown
+    Type: Etc
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 25899
+    AegisName: E_Abyss1
+    Name: Abyssal Essence
+    Type: Etc
+    Buy: 1200
+    Weight: 10
+    Flags:
+      BuyingStore: true
+
+  - Id: 300140
+    AegisName: ILL_Sropho_Card
+    Name: Abysmal Sropho Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      .@r = getrefine();
+      bonus2 bMagicAtkEle,Ele_Wind,3;
+      if (.@r>=9) {
+         bonus2 bMagicAtkEle,Ele_Wind,2;
+      }
+      if (.@r>=11) {
+         bonus2 bMagicAtkEle,Ele_Wind,5;
+      }
+
+  - Id: 300141
+    AegisName: ILL_Obeaune_Card
+    Name: Abysmal Obeaune Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Both_Accessory: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus bMatk,30;
+
+  - Id: 300142
+    AegisName: ILL_Deviace_Card
+    Name: Abysmal Deviace Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      .@r = getrefine();
+      bonus2 bAddRace,RC_Fish,5;
+      bonus2 bAddEle,Ele_Water,5;
+      if (.@r>=7) {
+         bonus2 bAddEle,Ele_Water,5;
+      }
+      if (.@r>=9) {
+         bonus2 bAddRace,RC_Fish,5;
+      }
+
+  - Id: 300143
+    AegisName: ILL_Marse_Card
+    Name: Abysmal Marse Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Left_Hand: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Earth,15;
+      bonus2 bSubRace,RC_Insect,15;
+
+  - Id: 300144
+    AegisName: ILL_Merman_Card
+    Name: Abysmal Merman Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Shoes: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus bBaseAtk,4*(readparam(bStr)/15);
+
+  - Id: 300145
+    AegisName: ILL_Abysmal_Witch_Card
+    Name: Abysmal Witch Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bMagicAtkEle,Ele_Fire,100;
+      bonus2 bMagicAtkEle,Ele_Dark,100;
+      bonus2 bSubEle,Ele_All,-30;
+
+  - Id: 300146
+    AegisName: ILL_Sedora_Card
+    Name: Abysmal Sedora Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bCriticalAddRace,RC_Fish,30;
+
+  - Id: 300147
+    AegisName: ILL_Sword_Fish_Card
+    Name: Abysmal Swordfish Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Head_Top: true
+      Head_Mid: true
+      Head_Low: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Water,10;
+      if (getrefine()>=9) {
+         bonus2 bMagicAddEle,Ele_Water,10;
+      }
+
+  - Id: 300148
+    AegisName: ILL_Strouf_Card
+    Name: Abysmal Strouf Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Armor: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus bMaxHPrate,10;
+      bonus bMaxSPrate,5;
+      if (getrefine()>=9) {
+         bonus2 bMagicAddEle,Ele_Water,5;
+         bonus2 bAddEle,Ele_Water,5;
+      }
+
+  - Id: 300149
+    AegisName: ILL_Phen_Card
+    Name: Abysmal Phen Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Garment: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus2 bSubEle,Ele_Neutral,15;
+      bonus2 bMagicAtkEle,Ele_Wind,3*getrefine();
+
+  - Id: 300150
+    AegisName: ILL_King_Dramoh_Card
+    Name: Abysmal King Dramoh Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Head_Top: true
+      Head_Mid: true
+      Head_Low: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus bMaxHPrate,-5;
+      bonus bAtkRate,(getrefine()/3);
+
+  - Id: 300151
+    AegisName: ILL_Kraken_Card
+    Name: Abysmal Kraken Card
+    Type: Card
+    Weight: 10
+    Locations:
+      Right_Hand: true
+    Flags:
+      DropEffect: CLIENT
+    Script: |
+      bonus bLongAtkRate,25;
+      bonus bPerfectHitAddRate,5;
+
+  - Id: 510
+    AegisName: Blue_Herb
+    Name: Blue Herb
+    Type: Healing
+    Buy: 60
+    Weight: 70
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal 0,rand(15,30);
+
+  - Id: 517
+    AegisName: Meat
+    Name: Meat
+    Type: Healing
+    Buy: 50
+    Weight: 150
+    Flags:
+      BuyingStore: true
+    Script: |
+      itemheal rand(70,100),0;
+
+  - Id: 603
+    AegisName: Old_Blue_Box
+    Name: Old Blue Box
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Trade:
+      NoSell: true
+    Script: |
+      getgroupitem(IG_BlueBox);
+
+  - Id: 607
+    AegisName: Yggdrasilberry
+    Name: Yggdrasil Berry
+    Type: Healing
+    Buy: 5000
+    Weight: 300
+    Flags:
+      BuyingStore: true
+    Delay:
+      Duration: 5000
+      Status: Reuse_Limit_F
+    Script: |
+      percentheal 100,100;
+
+  - Id: 616
+    AegisName: Old_Card_Album
+    Name: Old Card Album
+    Type: Usable
+    Buy: 10000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getgroupitem(IG_CardAlbum);
+
+  - Id: 617
+    AegisName: Old_Violet_Box
+    Name: Old Purple Box
+    Type: Usable
+    Buy: 10000
+    Weight: 200
+    Flags:
+      BuyingStore: true
+      Container: true
+    Trade:
+      NoSell: true
+    Script: |
+      getgroupitem(IG_VioletBox);
+
+  - Id: 12012
+    AegisName: Crystal_Arrow_Container
+    Name: Crystal Arrow Quiver
+    Type: Usable
+    Buy: 2
+    Sell: 0
+    Weight: 250
+    Flags:
+      BuyingStore: true
+    Script: |
+      getitem 1754,500;
+
+  - Id: 12246
+    AegisName: Magic_Card_Album
+    Name: Mystical Card Album
+    Type: Usable
+    Buy: 10000
+    Weight: 50
+    Flags:
+      BuyingStore: true
+      Container: true
+    Script: |
+      getgroupitem(IG_MagicCardAlbum);
+
